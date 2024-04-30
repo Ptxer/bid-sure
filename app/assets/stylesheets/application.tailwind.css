@@ -1,0 +1,61 @@
+@import "components/card.css";
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+    .item-align-center{
+        align-items: center;
+    }
+    .item-center{
+        align-items: center;
+    }
+}
+
+@layer components {
+    .button {
+        @apply block w-40 px-3 py-4 rounded-xl shadow-sm ring-1 ring-inset;
+        @apply text-sm font-semibold text-white;
+        @apply text-nowrap;
+    }
+
+    .btn-primary {
+        @apply button;
+        @apply bg-blue-600 hover:bg-blue-300 ring-white;
+    }
+
+    .btn-danger {
+        @apply button;
+        @apply bg-red-600 hover:bg-red-300 ring-white;
+    }
+
+    .img-style {
+        @apply rounded-xl shadow-lg;
+    }
+
+    .text-label {
+        @apply block text-2xl font-bold leading-6 text-gray-900 font-bold py-2;
+    }
+
+    .btn-input {
+        @apply block w-40 rounded-md border-0 py-2 pl-3 pr-20;
+        @apply text-gray-900 sm:text-sm sm:leading-6;
+        @apply placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600;
+        @apply ring-1 ring-inset ring-gray-300;
+    }
+
+    .page-hidden{
+        @apply fixed left-0 top-0 bg-black bg-opacity-50 w-screen h-screen flex justify-center item-center;
+    }
+
+    .page-pop-up{
+        @apply bg-white rounded shadow-md p-8 w-[30%] h-[60%];
+    }
+
+}
+
+

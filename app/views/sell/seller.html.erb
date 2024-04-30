@@ -1,0 +1,72 @@
+<% content_for :title, "BID SURE | Auction" %>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/datepicker.min.js"></script>
+<div class="py-4 mb-8 ">
+  <h2 class="text-2xl font-bold py-4 ">Start Auction</h2>
+  <div class="flex gap-x-8">
+    <div>
+      <%= image_tag("ee.png", :width => "630", :height => "520", :class => "img-style") %>
+    </div>
+    <div>
+      <img class="img-style" src="https://dummyimage.com/200x200">
+    </div>
+  </div>
+</div>
+<div>
+  <hr class="my-5" style="border:1px solid #787878">
+  <label for="price" class="text-label">Title</label>
+  <div class="relative mt-2 rounded-md shadow-sm">
+    <input type="text" name="product_name" id="product_name" class="btn-input w-full pl-7" placeholder="Name">
+  </div>
+
+  <hr class="my-5" style="border:1px solid #787878">
+
+  <label for="price" class="text-label">Price</label>
+  <label for="price" class="block text-base font-medium leading-6 text-gray-900 font-bold py-2">Auction Duration</label>
+  <div class="relative w-40">
+    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+    </div>
+    <input type="datetime-local" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-80 ps-10 p-2.5" placeholder="Select Date">
+  </div>
+
+  <div class="flex mt-2 rounded-md gap-x-10">
+    <div>
+      <label for="price" class="text-label">Starting Bid</label>
+      <input type="text" name="product_name" id="product_name" class="btn-input" placeholder="THB">
+    </div>
+    <div>
+      <label for="price" class="text-label">Buy it now</label>
+      <input type="text" name="product_name" id="product_name" class="btn-input" placeholder="THB">
+    </div>
+  </div>
+
+  <div class="grid grid-cols-6 gap-4 py-4">
+    <div class="grid grid-cols-subgrid gap-4 col-span-6">
+      <div class="col-start-6 flex gap-4">
+        <button type="button" class="btn-danger">Cancel</button>
+        <button type="button" class="btn-primary">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div data-controller="slideshow">
+  <button data-action="click->slideshow#previous"> ←</button>
+  <button data-action="click->slideshow#next"> →</button>
+
+  <div data-slideshow-target="slide">🐵</div>
+  <div data-slideshow-target="slide">🙈</div>
+  <div data-slideshow-target="slide">🙉</div>
+  <div data-slideshow-target="slide">🙊</div>
+  <div>/</div>
+  <div>/</div>
+  <div>/</div>
+  <div>/</div>
+
+</div>
+
+<script>
+    document.getElementById("backBtn").onclick = function () {
+        window.location.href = "/";
+    };
+</script>

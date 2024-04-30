@@ -1,0 +1,252 @@
+<% content_for :title, "BID SURE | Auction" %>
+
+<div class="py-4">
+  <%= link_to "< back to previous page", root_path, class: "text-sm font-light" %>
+</div>
+
+<div class="flex py-2 gap-5">
+  <div class="overflow-clip h-[525px]">
+    <div class="overflow-y-scroll flex flex-col gap-2">
+      <%= image_tag("dd.png", :width => "100", :height => "100", :class => "img-style") %>
+      <img class="img-style" src="https://dummyimage.com/100x100">
+      <img class="img-style" src="https://dummyimage.com/100x100">
+      <img class="img-style" src="https://dummyimage.com/100x100">
+      <img class="img-style" src="https://dummyimage.com/100x100">
+    </div>
+  </div>
+  <div class="grid gap-2">
+    <%# <img class="rounded-xl" src="https://dummyimage.com/630x525" > %>
+    <%= link_to "product" do %>
+      <%= image_tag("ee.png", :width => "630", :height => "525", :class => "img-style") %>
+    <% end %>
+  </div>
+  <div class="flex flex-col gap-4">
+
+    <div class="font-semibold">
+      <h1>Contrary to popular belief, Lorem Ipsum is not simply random text.
+        <br>It has roots in a piece of classical Latin literature from 45 BC</h1>
+    </div>
+
+    <div>
+      <%= image_tag("qq.png", :width => "640", :height => "88", :class => "img-style") %>
+    </div>
+
+    <div>
+
+      <div class="flex gap-3">
+
+        <div class="font-bold">
+          <h1> THB 2,800 </h1>
+        </div>
+
+        <div class="font-bold text-zinc-400 line-through">
+          <h1> THB 3,800 </h1>
+        </div>
+      </div>
+      <div class="font-light text-red-600">
+        <h3> SAVE -18% </h3>
+      </div>
+      <div class="flex justify-between gap-10">
+        <div class="text-2xl font-bold">
+          <h3> BID 2,300 </h3>
+        </div>
+        <div class="text-2xl font-bold text-red-600">
+          <h3> 1 DAY 12 : 12 : 12 </h3>
+        </div>
+      </div>
+    </div>
+    <div class="grid grid-rows-4 gap-2">
+      <button type="button" class="btn-primary w-full" id="bid_now">
+        Bid Now
+      </button>
+      <button type="button" class="btn-primary w-full" id="buy_now">
+        Buy Now
+      </button>
+      <button type="button" class="btn-primary w-full" id="make_offer">
+        Make Offer
+      </button>
+    </div>
+
+  </div>
+</div>
+<div class="py-4 mb-8">
+  <h2 class="text-2xl font-bold py-4">Explore related items</h2>
+  <div class="flex justify-center">
+    <div class="flex gap-x-4">
+      <%= link_to "product" do %>
+        <%= image_tag("sssa.png", :width => "320", :height => "380", :class => "img-style") %>
+      <% end %>
+      <%= link_to "product" do %>
+        <%= image_tag("sssa.png", :width => "320", :height => "380", :class => "img-style") %>
+      <% end %>
+      <%= link_to "product" do %>
+        <%= image_tag("sssa.png", :width => "320", :height => "380", :class => "img-style") %>
+      <% end %>
+      <%= link_to "product" do %>
+        <%= image_tag("sssa.png", :width => "320", :height => "380", :class => "img-style") %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div class="page-hidden hidden" id="popup">
+  <div class="page-pop-up ">
+    <div>
+      <div class="flex justify-between gap-10">
+        <div class="text-2xl font-bold py-4">
+          <h2> Place Your Bid </h2>
+        </div>
+        <div class="text-2xl font-normal py-4">
+          <div id="close"> X</div>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-between gap-10">
+      <div class="text-xl font-normal">
+        <h3> BID 2,300 </h3>
+      </div>
+      <div class="text-xl font-bold text-red-600">
+        <h3> 1 DAY 12 : 12 : 12 </h3>
+      </div>
+    </div>
+    <div class="flex justify-between py-2 gap-5 item-align-center">
+      <button type="button" class="btn-primary ">100 THB</button>
+      <button type="button" class="btn-primary">200 THB</button>
+      <button type="button" class="btn-primary">500 THB</button>
+    </div>
+    <hr class="my-5" style="border:1px solid #787878">
+    <h2> Your Max bid </h2>
+    <div class="flex gap-x-4">
+      <input type="text" name="product_name" id="product_name" class="btn-input w-80" placeholder="THB">
+      <button type="button" class="btn-primary" id="confirm">Confirm</button>
+    </div>
+  </div>
+</div>
+<div class="page-hidden hidden" id="popup_buyer">
+  <div class="page-pop-up ">
+    <div>
+      <div class="flex justify-between gap-10">
+        <div class="text-2xl font-bold py-4">
+          <h2> Buy Now </h2>
+        </div>
+        <div class="text-2xl font-normal py-4">
+          <div id="close1"> X</div>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col-2 gap-4">
+      <div>
+        <%= image_tag("dd.png", :width => "200", :height => "200", :class => "img-style") %>
+      </div>
+      <div class="flex flex-col gap-4">
+        <div class="font-semibold">
+          <h1> Contrary to popular belief, Lorem Ipsum is not simply random text..... </h1>
+        </div>
+        <div>
+          <div class="flex gap-3">
+            <div class="font-bold">
+              <h1> THB 2,800 </h1>
+            </div>
+            <div class="font-bold text-zinc-400 line-through">
+              <h1> THB 3,800 </h1>
+            </div>
+          </div>
+          <div class="font-light text-red-600">
+            <h3> SAVE -18% </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="py-5">
+      <button type="button" class="btn-primary w-full ">
+        Buy
+      </button>
+    </div>
+  </div>
+</div>
+<div class="page-hidden hidden" id="popup_makeoffer">
+  <div class="page-pop-up">
+
+    <div>
+      <div class="flex justify-between gap-10">
+        <div class="text-2xl font-bold py-4">
+          <h2> Make An Offer </h2>
+        </div>
+        <div class="text-2xl font-normal py-4">
+          <div id="close2"> X</div>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-center gap-4">
+      <div class="text-2xl font-normal py-4">
+        <h2>Your Offer</h2>
+      </div>
+    </div>
+    <div class="flex gap-x-6">
+      <input type="text" name="product_name" id="product_name" class="btn-input w-full" placeholder="THB">
+    </div>
+
+    <hr class="my-5" style="border:1px solid #787878">
+
+    <div class="flex justify-between py-2 gap-5 item-align-center">
+      <button type="button" class="btn-primary"> 2,400 THB</button>
+      <button type="button" class="btn-primary"> 2,500 THB</button>
+      <button type="button" class="btn-primary "> 2,600 THB</button>
+    </div>
+    <div class="py-4">
+      <input type="text" name="product_name" id="product_name" class="btn-input w-full" placeholder="Message">
+    </div>
+    <div class="py-4">
+      <button type="button" class="btn-primary w-full">
+        Continue
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+    //////////////////////////////////////    Bid Now popup    ////////////////////////////////////////////////////////////
+
+    document.getElementById("bid_now").onclick = function () {
+        const element = document.getElementById("popup");
+        element.classList.remove("hidden");
+        console.log("test_bidnow");
+    }
+
+
+    document.getElementById("close").onclick = function () {
+        const element = document.getElementById("popup");
+        element.classList.add("hidden");
+        console.log("test_bidnow");
+    }
+
+    ///////////////////////////////////////////    Buy now popup   ///////////////////////////////////////////////////////
+
+    document.getElementById("buy_now").onclick = function () {
+        const element = document.getElementById("popup_buyer");
+        element.classList.remove("hidden");
+        console.log("test_buynow");
+    }
+
+    document.getElementById("close1").onclick = function () {
+        const element = document.getElementById("popup_buyer");
+        element.classList.add("hidden");
+        console.log("test_bidnow");
+    }
+
+    //////////////////////////////////////    Make offer popup  /////////////////////////////////////////////////////
+
+    document.getElementById("make_offer").onclick = function () {
+        const element = document.getElementById("popup_makeoffer");
+        element.classList.remove("hidden");
+        console.log("test_make_offer");
+    }
+
+    document.getElementById("close2").onclick = function () {
+        const element = document.getElementById("popup_makeoffer");
+        element.classList.add("hidden");
+        console.log("test_make_offer");
+    }
+</script>
+

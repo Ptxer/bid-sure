@@ -1,0 +1,73 @@
+<% content_for :title, "BID SURE | Auction" %>
+
+<div class="py-4 mb-8">
+  <h2 class="text-2xl font-bold">Today's Auctions</h2>
+  <div class="flex py-4 justify-center">
+    <div class="flex gap-x-6">
+      <%= image_tag("ww.png", :width => "420", :height => "120", :class => "img-style") %>
+      <%= image_tag("ww.png", :width => "420", :height => "120", :class => "img-style") %>
+      <%= image_tag("ww.png", :width => "420", :height => "120", :class => "img-style") %>
+    </div>
+  </div>
+</div>
+
+
+<div class="py-4 mb-8">
+  <h2 class="text-2xl font-bold">Populars</h2>
+  <div class="flex py-4 justify-center">
+    <div class="flex gap-x-6">
+      <%= image_tag("ww.png", :width => "420", :height => "120", :class => "img-style") %>
+      <%= image_tag("ww.png", :width => "420", :height => "120", :class => "img-style") %>
+      <%= image_tag("ww.png", :width => "420", :height => "120", :class => "img-style") %>
+    </div>
+  </div>
+</div>
+
+<div class="py-8 mb-8">
+  <h2 class="text-2xl font-bold">Product</h2>
+  <div class="flex py-4 justify-center">
+    <div class="flex gap-x-4">
+      <%= link_to "product" do %>
+        <%= image_tag("sssa.png", :width => "320", :height => "380", :class => "img-style") %>
+      <% end %>
+      <%= link_to "product" do %>
+        <%= image_tag("sssa.png", :width => "320", :height => "380", :class => "img-style") %>
+      <% end %>
+      <%= link_to "product" do %>
+        <%= image_tag("sssa.png", :width => "320", :height => "380", :class => "img-style") %>
+      <% end %>
+      <%= link_to "product" do %>
+        <%= image_tag("sssa.png", :width => "320", :height => "380", :class => "img-style") %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="flex justify-center gap-4">
+  <%= render "card/card" %>
+  <%= render "card/card" %>
+  <%= render "card/card" %>
+  <%= render "card/card" %>
+</div>
+
+
+
+
+<div class="py-10">
+  <div data-controller="slideshow">
+    <button data-action="click->slideshow#previous"> ←</button>
+    <button data-action="click->slideshow#next"> →</button>
+
+    <div data-slideshow-target="slide">🐵</div>
+    <div data-slideshow-target="slide">🙈</div>
+    <div data-slideshow-target="slide">🙉</div>
+    <div data-slideshow-target="slide">🙊</div>
+    <div>/</div>
+    <div>/</div>
+    <div>/</div>
+    <div>/</div>
+  </div>
+</div>
